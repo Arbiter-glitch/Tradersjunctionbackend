@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 var app = new express();
 app.use(cors());
 app.use(express.json());
-const port = process.env.PORT || 3300;
+
 
 function verifyToken(req, res, next) {
   if (!req.headers.authorization) {
@@ -205,6 +205,6 @@ app.delete('/remove/:id', verifyToken, (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log("listening at port"+" "+port);
+app.listen(3300, () => {
+  console.log("listening at port 3300");
 })
