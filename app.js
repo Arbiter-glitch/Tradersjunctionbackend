@@ -7,7 +7,6 @@ var app = new express();
 app.use(cors());
 app.use(express.json());
 
-
 function verifyToken(req, res, next) {
   if (!req.headers.authorization) {
     return res.status(401).send('Unauthorized request')
